@@ -13,10 +13,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(fontFamily: 'SourceCodePro'),
-      home: HomePage(),
-    );
+        debugShowCheckedModeBanner: false,
+        title: 'Flutter Demo',
+        theme: ThemeData(fontFamily: 'SourceCodePro'),
+        initialRoute: 'home',
+        routes: {
+          'home': (context) => HomePage(),
+          'result': (context) => ResultPage()
+        });
   }
 }

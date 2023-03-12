@@ -89,9 +89,7 @@ class _HomePageState extends State<HomePage> {
   Widget _searchButton() {
     return MaterialButton(
       onPressed: () {
-        Navigator.push(context, MaterialPageRoute(builder: (BuildContext) {
-          return ResultPage();
-        }));
+        Navigator.pushNamed(context, 'result');
       },
       minWidth: 200,
       height: 65,
