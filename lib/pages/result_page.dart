@@ -1,6 +1,7 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:sentimentapp/charts/bar_chart.dart';
+import 'package:sentimentapp/charts/radial_chart.dart';
 
 class ResultPage extends StatefulWidget {
   const ResultPage({super.key});
@@ -20,20 +21,23 @@ class _ResultPageState extends State<ResultPage> {
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.black,
-        body: Center(
-          child: Column(children: [
-            SizedBox(
-              height: 40,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                _closeButton(),
-              ],
-            ),
-            _resultPageTitle(),
-            BarChartSample7()
-          ]),
+        body: SingleChildScrollView(
+          child: Center(
+            child: Column(children: [
+              SizedBox(
+                height: 40,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  _closeButton(),
+                ],
+              ),
+              _resultPageTitle(),
+              BarChartSample7(),
+              RadialChartSample()
+            ]),
+          ),
         ),
       ),
     );
