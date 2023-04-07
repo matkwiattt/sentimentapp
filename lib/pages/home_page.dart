@@ -1,6 +1,9 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:sentimentapp/pages/result_page.dart';
+import 'package:http/http.dart' as http;
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -10,8 +13,11 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  bool _isLoading = false;
   double? _deviceHight;
   double? _deviceWidth;
+  TextEditingController textEditingController = new TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     _deviceHight = MediaQuery.of(context).size.height;
@@ -66,6 +72,7 @@ class _HomePageState extends State<HomePage> {
     return Container(
       width: _deviceWidth! * 0.45,
       child: TextField(
+        controller: textEditingController,
         cursorColor: Color.fromRGBO(238, 195, 189, 1),
         inputFormatters: [UpperCaseTextFormatter()],
         style: TextStyle(
@@ -87,17 +94,49 @@ class _HomePageState extends State<HomePage> {
   }
 
   Widget _searchButton() {
-    return MaterialButton(
-      onPressed: () {
-        Navigator.pushNamed(context, 'result');
-      },
-      minWidth: 200,
-      height: 65,
-      color: Color.fromRGBO(238, 195, 189, 1),
-      child: Text(
-        "SEARCH",
-        style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
-      ),
+    return Stack(
+      children: [
+        MaterialButton(
+          onPressed: () async {
+            setState(() {
+              _isLoading = true;
+            });
+            String searchQuery = textEditingController.text;
+            Uri apiUrl =
+                Uri.parse('http://127.0.0.1:5000/test?query=$searchQuery');
+            http.Response response = await http.get(apiUrl);
+            if (response.statusCode == 200) {
+              // Convert the response body from JSON to a Map
+              Map<String, dynamic> data = jsonDecode(response.body);
+
+              // Navigate to the result page and pass the data as arguments
+              Navigator.pushNamed(context, 'result',
+                  arguments: {'data': data, 'searchQuery': searchQuery});
+            } else {
+              // Handle the error
+              print('Request failed with status: ${response.statusCode}.');
+            }
+            setState(() {
+              _isLoading = false;
+            });
+
+            // Navigator.pushNamed(context, 'result');
+          },
+          minWidth: 200,
+          height: 65,
+          color: Color.fromRGBO(238, 195, 189, 1),
+          child: Text(
+            "SEARCH",
+            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
+          ),
+        ),
+        if (_isLoading)
+          Positioned.fill(
+            child: Center(
+              child: CircularProgressIndicator(),
+            ),
+          ),
+      ],
     );
   }
 }

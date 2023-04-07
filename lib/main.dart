@@ -19,7 +19,10 @@ class MyApp extends StatelessWidget {
         initialRoute: 'home',
         routes: {
           'home': (context) => HomePage(),
-          'result': (context) => ResultPage()
+          'result': (context) => ResultPage(
+                data: 'lol',
+                searchQuery: '',
+              )
         });
   }
 }

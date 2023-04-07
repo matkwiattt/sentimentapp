@@ -32,6 +32,7 @@ dependencies:
   fl_chart: ^0.61.0
   flutter:
     sdk: flutter
+  http: ^0.13.5
   syncfusion_flutter_gauges: ^20.4.54
 
 dev_dependencies:
