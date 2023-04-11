@@ -1,7 +1,7 @@
 # PL Dokumentacja 
 
 ## 1. Charakterystyka oprogramowania:
-- Nazwa skrócona: `SentimentAnalyzer`
+- Nazwa skrócona: `TweetThoughts`
 - Nazwa pełna: `Aplikacja do analizy sentymentu tweetów`
 - Krótki opis z wskazaniem celów: 
    Aplikacja `SentimentAnalyzer` ma na celu analizę sentymentu ostatnich 100 tweetów zawierających słowo wpisane przez użytkownika. Backend aplikacji napisany jest w języku Python, używa bibliotek takich jak `snscrape.modules.twitter`, `pandas`, `transformers - AutoTokenizer`, `AutoModelForSequenceClassification`, `scipy.special - softmax`, `flask - request`, `flask`, `flask_cors - CORS`. Do frontendu użyto technologii Flutter umożliwiającej działanie webowe jak i aplikacje mobilne.
@@ -14,22 +14,22 @@
 ### Funkcjonalne:
 | Identyfikator | Nazwa | Opis | Priorytet | Kategoria |
 | --- | --- | --- | --- | --- |
-| `FR-001` | Wyszukiwanie tweetów | Użytkownik może wpisać słowo, po którym chce przeszukać ostatnie 100 tweetów. | `1` | Funkcjonalne |
+| `FR-001` | Wyszukiwanie tweetów | Użytkownik może wpisać słowo, na podstawie którego chce znaleźć ostatnie 100 tweetów. | `1` | Funkcjonalne |
 | `FR-002` | Analiza sentymentu | Aplikacja powinna wykrywać sentyment tweetów (pozytywny, neutralny, negatywny). | `1` | Funkcjonalne |
 | `FR-003` | Wyświetlanie wyników | Aplikacja powinna wyświetlać wyniki analizy sentymentu w formie procentowej oraz w postaci wykresu. | `1` | Funkcjonalne |
 
 ### Poza funkcjonalne:
 | Identyfikator | Nazwa | Opis | Priorytet | Kategoria |
 | --- | --- | --- | --- | --- |
-| `NFR-001` | Bezpieczeństwo danych | Aplikacja powinna chronić dane użytkowników przed nieautoryzowanym dostępem. | `1` | Poza funkcjonalne |
-| `NFR-002` | Czas odpowiedzi | Aplikacja powinna działać szybko i bez problemów. | `2` | Poza funkcjonalne |
-| `NFR-003` | Dostępność | Aplikacja powinna być dostępna dla użytkowników z różnych urządzeń i przeglądarek internetowych. | `2` | Poza funkcjonalne |
+| `NFR-001` | Bezpieczeństwo danych | Aplikacja musi chronić dane użytkowników przed nieautoryzowanym dostępem. | `1` | Poza funkcjonalne |
+| `NFR-002` | Czas odpowiedzi | Aplikacja powinna działać szybko i bezproblemowo. | `2` | Poza funkcjonalne |
+| `NFR-003` | Dostępność | Aplikacja powinna być dostępna dla użytkowników korzystających z różnych urządzeń i przeglądarek internetowych. | `2` | Poza funkcjonalne |
 
 
 # EN Documentation
 
 ## 1. Software Characteristics:
-- Abbreviated name: `SentimentAnalyzer`
+- Abbreviated name: `TweetThoughts`
 - Full name: `Application for analyzing sentiment of tweets`
 - Brief description with indication of goals: 
    The `SentimentAnalyzer` application aims to analyze the sentiment of the latest 100 tweets containing a word entered by the user. The backend of the application is written in Python and uses libraries such as `snscrape.modules.twitter`, `pandas`, `transformers - AutoTokenizer`, `AutoModelForSequenceClassification`, `scipy.special - softmax`, `flask - request`, `flask`, `flask_cors - CORS`. The frontend is built using Flutter technology, allowing for both web-based and mobile applications.
