@@ -1,4 +1,4 @@
-# Wymagana dokumentacja 
+# Dokumentacja 
 
 ## 1. Charakterystyka oprogramowania:
 - Nazwa skrócona: `SentimentAnalyzer`
