@@ -1,4 +1,4 @@
-# Dokumentacja 
+# PL Dokumentacja 
 
 ## 1. Charakterystyka oprogramowania:
 - Nazwa skrócona: `SentimentAnalyzer`
@@ -26,7 +26,7 @@
 | `NFR-003` | Dostępność | Aplikacja powinna być dostępna dla użytkowników z różnych urządzeń i przeglądarek internetowych. | `2` | Poza funkcjonalne |
 
 
-# Documentation
+# EN Documentation
 
 ## 1. Software Characteristics:
 - Abbreviated name: `SentimentAnalyzer`
