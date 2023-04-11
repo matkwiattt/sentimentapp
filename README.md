@@ -8,7 +8,7 @@
 
 ## 2. Prawa autorskie:
 - Autorzy: Aplikacja została stworzona przez zespół programistów z firmy XYZ.
-- Warunki licencyjne do oprogramowania wytworzonego przez grupę: Oprogramowanie jest własnością firmy XYZ i nie może być kopiowane lub dystrybuowane bez zgody firmy.
+- Warunki licencyjne do oprogramowania wytworzonego przez grupę: MIT
 
 ## 3. Specyfikacja wymagań:
 ### Funkcjonalne:
@@ -25,3 +25,30 @@
 | `NFR-002` | Czas odpowiedzi | Aplikacja powinna działać szybko i bez problemów. | `2` | Poza funkcjonalne |
 | `NFR-003` | Dostępność | Aplikacja powinna być dostępna dla użytkowników z różnych urządzeń i przeglądarek internetowych. | `2` | Poza funkcjonalne |
 
+
+# Documentation
+
+## 1. Software Characteristics:
+- Abbreviated name: `SentimentAnalyzer`
+- Full name: `Application for analyzing sentiment of tweets`
+- Brief description with indication of goals: 
+   The `SentimentAnalyzer` application aims to analyze the sentiment of the latest 100 tweets containing a word entered by the user. The backend of the application is written in Python and uses libraries such as `snscrape.modules.twitter`, `pandas`, `transformers - AutoTokenizer`, `AutoModelForSequenceClassification`, `scipy.special - softmax`, `flask - request`, `flask`, `flask_cors - CORS`. The frontend is built using Flutter technology, allowing for both web-based and mobile applications.
+
+## 2. Copyright:
+- Authors: The application was developed by a team of programmers from XYZ company.
+- Licensing terms for software developed by the group: MIT
+
+## 3. Requirements Specification:
+### Functional:
+| Identifier | Name | Description | Priority | Category |
+| --- | --- | --- | --- | --- |
+| `FR-001` | Tweet search | The user can enter a word to search for the latest 100 tweets containing that word. | `1` | Functional |
+| `FR-002` | Sentiment analysis | The application should detect the sentiment of tweets (positive, neutral, negative). | `1` | Functional |
+| `FR-003` | Display of results | The application should display the results of sentiment analysis in percentage form and in the form of a chart. | `1` | Functional |
+
+### Non-Functional:
+| Identifier | Name | Description | Priority | Category |
+| --- | --- | --- | --- | --- |
+| `NFR-001` | Data security | The application should protect user data from unauthorized access. | `1` | Non-Functional |
+| `NFR-002` | Response time | The application should work quickly and without problems. | `2` | Non-Functional |
+| `NFR-003` | Accessibility | The application should be accessible to users from different devices and internet browsers. | `2` | Non-Functional |
