@@ -4,7 +4,7 @@
 - Nazwa skrócona: `TweetThoughts`
 - Nazwa pełna: `Aplikacja do analizy sentymentu tweetów`
 - Krótki opis z wskazaniem celów: 
-   Aplikacja `SentimentAnalyzer` ma na celu analizę sentymentu ostatnich 100 tweetów zawierających słowo wpisane przez użytkownika. Backend aplikacji napisany jest w języku Python, używa bibliotek takich jak `snscrape.modules.twitter`, `pandas`, `transformers - AutoTokenizer`, `AutoModelForSequenceClassification`, `scipy.special - softmax`, `flask - request`, `flask`, `flask_cors - CORS`. Do frontendu użyto technologii Flutter umożliwiającej działanie webowe jak i aplikacje mobilne.
+   Aplikacja `TweetThoughts` ma na celu przeprowadzić analizę sentymentu ostatnich 100 tweetów zawierających słowo wpisane przez użytkownika. Backend aplikacji napisany jest w języku Python, używa bibliotek takich jak `snscrape.modules.twitter`, `pandas`, `transformers - AutoTokenizer`, `AutoModelForSequenceClassification`, `scipy.special - softmax`, `flask - request`, `flask`, `flask_cors - CORS`. Do frontendu użyto technologii Flutter umożliwiającej działanie webowe jak i aplikacje mobilne.
 
 ## 2. Prawa autorskie:
 - Autorzy: Aplikacja została stworzona przez zespół programistów z firmy XYZ.
@@ -14,7 +14,7 @@
 ### Funkcjonalne:
 | Identyfikator | Nazwa | Opis | Priorytet | Kategoria |
 | --- | --- | --- | --- | --- |
-| `FR-001` | Wyszukiwanie tweetów | Użytkownik może wpisać słowo, na podstawie którego chce znaleźć ostatnie 100 tweetów. | `1` | Funkcjonalne |
+| `FR-001` | Wyszukiwanie tweetów | Użytkownik może wprowadzić wyrażenie, na podstawie którego chce znaleźć ostatnie 100 tweetów. | `1` | Funkcjonalne |
 | `FR-002` | Analiza sentymentu | Aplikacja powinna wykrywać sentyment tweetów (pozytywny, neutralny, negatywny). | `1` | Funkcjonalne |
 | `FR-003` | Wyświetlanie wyników | Aplikacja powinna wyświetlać wyniki analizy sentymentu w formie procentowej oraz w postaci wykresu. | `1` | Funkcjonalne |
 
@@ -32,7 +32,7 @@
 - Abbreviated name: `TweetThoughts`
 - Full name: `Application for analyzing sentiment of tweets`
 - Brief description with indication of goals: 
-   The `SentimentAnalyzer` application aims to analyze the sentiment of the latest 100 tweets containing a word entered by the user. The backend of the application is written in Python and uses libraries such as `snscrape.modules.twitter`, `pandas`, `transformers - AutoTokenizer`, `AutoModelForSequenceClassification`, `scipy.special - softmax`, `flask - request`, `flask`, `flask_cors - CORS`. The frontend is built using Flutter technology, allowing for both web-based and mobile applications.
+   The `TweetThoughts` application aims to analyze the sentiment of the latest 100 tweets containing a word entered by the user. The backend of the application is written in Python and uses libraries such as `snscrape.modules.twitter`, `pandas`, `transformers - AutoTokenizer`, `AutoModelForSequenceClassification`, `scipy.special - softmax`, `flask - request`, `flask`, `flask_cors - CORS`. The frontend is built using Flutter technology, allowing for both web-based and mobile applications.
 
 ## 2. Copyright:
 - Authors: The application was developed by a team of programmers from XYZ company.
