@@ -4,7 +4,7 @@
 - Nazwa skrócona: `TweetThoughts`
 - Nazwa pełna: `Aplikacja do analizy sentymentu tweetów`
 - Krótki opis z wskazaniem celów: 
-   Aplikacja `SentimentAnalyzer` ma na celu analizę sentymentu ostatnich 100 tweetów zawierających słowo wpisane przez użytkownika. Backend aplikacji napisany jest w języku Python, używa bibliotek takich jak `snscrape.modules.twitter`, `pandas`, `transformers - AutoTokenizer`, `AutoModelForSequenceClassification`, `scipy.special - softmax`, `flask - request`, `flask`, `flask_cors - CORS`. Do frontendu użyto technologii Flutter umożliwiającej działanie webowe jak i aplikacje mobilne.
+   Aplikacja `SentimentAnalyzer` ma na celu przeprowadzić analizę sentymentu 100 ostatnich tweetów zawierających słowo podane przez użytkownika. Backend aplikacji napisany jest w języku Python, używa bibliotek takich jak: `snscrape.modules.twitter`, `pandas`, `transformers - AutoTokenizer`, `AutoModelForSequenceClassification`, `scipy.special - softmax`, `flask - request`, `flask`, `flask_cors - CORS`. Do frontendu użyto technologii Flutter umożliwiającej działanie webowe jak i aplikacje mobilne.
 
 ## 2. Prawa autorskie:
 - Autorzy: Aplikacja została stworzona przez zespół programistów z firmy XYZ.
