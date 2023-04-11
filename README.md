@@ -1,16 +1,27 @@
-# sentimentapp
+# Wymagana dokumentacja 
 
-A new Flutter project.
+## 1. Charakterystyka oprogramowania:
+- Nazwa skrócona: `SentimentAnalyzer`
+- Nazwa pełna: `Aplikacja do analizy sentymentu tweetów`
+- Krótki opis z wskazaniem celów: 
+   Aplikacja `SentimentAnalyzer` ma na celu analizę sentymentu ostatnich 100 tweetów zawierających słowo wpisane przez użytkownika. Backend aplikacji napisany jest w języku Python, używa bibliotek takich jak `snscrape.modules.twitter`, `pandas`, `transformers - AutoTokenizer`, `AutoModelForSequenceClassification`, `scipy.special - softmax`, `flask - request`, `flask`, `flask_cors - CORS`. Do frontendu użyto technologii Flutter umożliwiającej działanie webowe jak i aplikacje mobilne.
 
-## Getting Started
+## 2. Prawa autorskie:
+- Autorzy: Aplikacja została stworzona przez zespół programistów z firmy XYZ.
+- Warunki licencyjne do oprogramowania wytworzonego przez grupę: Oprogramowanie jest własnością firmy XYZ i nie może być kopiowane lub dystrybuowane bez zgody firmy.
 
-This project is a starting point for a Flutter application.
+## 3. Specyfikacja wymagań:
+### Funkcjonalne:
+| Identyfikator | Nazwa | Opis | Priorytet | Kategoria |
+| --- | --- | --- | --- | --- |
+| `FR-001` | Wyszukiwanie tweetów | Użytkownik może wpisać słowo, po którym chce przeszukać ostatnie 100 tweetów. | `1` | Funkcjonalne |
+| `FR-002` | Analiza sentymentu | Aplikacja powinna wykrywać sentyment tweetów (pozytywny, neutralny, negatywny). | `1` | Funkcjonalne |
+| `FR-003` | Wyświetlanie wyników | Aplikacja powinna wyświetlać wyniki analizy sentymentu w formie procentowej oraz w postaci wykresu. | `1` | Funkcjonalne |
 
-A few resources to get you started if this is your first Flutter project:
+### Poza funkcjonalne:
+| Identyfikator | Nazwa | Opis | Priorytet | Kategoria |
+| --- | --- | --- | --- | --- |
+| `NFR-001` | Bezpieczeństwo danych | Aplikacja powinna chronić dane użytkowników przed nieautoryzowanym dostępem. | `1` | Poza funkcjonalne |
+| `NFR-002` | Czas odpowiedzi | Aplikacja powinna działać szybko i bez problemów. | `2` | Poza funkcjonalne |
+| `NFR-003` | Dostępność | Aplikacja powinna być dostępna dla użytkowników z różnych urządzeń i przeglądarek internetowych. | `2` | Poza funkcjonalne |
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
